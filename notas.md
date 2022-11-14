@@ -44,4 +44,19 @@ El hook de efecto nos permite saber cuándo ya renderizó nuestra aplicación, y
 CLASE 16.
 REACT CONTEXT: ESTADO COMPARTIDO.
 
-D
+Es una forma de tener acceso a datos a través del árbol de componentes sin tener que pasar props manualmente en cada nivel, usando datos globales.
+
+Para esto tenemos un proveedor que envolverá a todos los componentes que serán los consumidores de nuestro contexto.
+
+Fases:
+1. Crear el contexto de nuestra aplicación.
+2. Proveer nuestro contexto con los datos que queremos globales.
+3. Consumir los datos desde cualquier parte de nuestra aplicación.
+
+Es importante crear el contexto con createContext, ya que este nos regresará dos componentes: proveedor y consumidor.
+
+Una vez ya tenemos nuestro proveedor envolviendo toda nuestra aplicación, ya podemos acceder a los datos desde cualquier componente hijo y olvidarnos de pasar props componente por componente.
+
+Con esto evitas pasar props a todos los componentes. Puedes tener muchos componentes que consuman un solo contexto y también varios contextos.
+
+Si el valor del contexto cambia, todos los componentes suscritos se re-renderizan y actualizarán su estado.
