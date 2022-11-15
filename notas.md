@@ -112,37 +112,5 @@ CLASE 21.
 ICON COMPONENT.
 
 
-
-
-
-<!-- 
-Esta es mi solución para el reto para cerrar el modal
-
-en el css solo use un z-index: 999; para que el boton esté sobre cualquier otro elemento
-
-En JS hice los siguiente
-
-import React, { useContext } from 'react';
-import { TodoContext } from '../../Context/TodoContext';
-import './CreateTodoButton.css';
-
-export const CreateTodoButton = () => {
-  const { openModal, setOpenModal } = useContext(TodoContext);
-
-  const handleClick = () => {
-    setOpenModal(!openModal);
-  };
-
-  return (
-    <>
-      <button
-        className="CreateTodoButton"
-        type="submit"
-        onClick={() => handleClick()}
-      >
-        {openModal ? 'x' : '+'}
-      </button>
-    </>
-  );
-};
- -->
+CLASE 22.
+DEPLOY CON GITHUB PAGES.
