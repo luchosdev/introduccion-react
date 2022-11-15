@@ -60,3 +60,74 @@ Una vez ya tenemos nuestro proveedor envolviendo toda nuestra aplicación, ya po
 Con esto evitas pasar props a todos los componentes. Puedes tener muchos componentes que consuman un solo contexto y también varios contextos.
 
 Si el valor del contexto cambia, todos los componentes suscritos se re-renderizan y actualizarán su estado.
+
+CLASE 17.
+USECONTEXT.
+
+El hook de contexto nos ayuda a acceder a datos globales de nuestro contexto, desde cualquier componente hijo, sin tener que pasar estos datos por props componente por componente.
+
+Tiene la misma funcionalidad que el consumer de nuestro contexto, pero useContext también tiene una manera más sencilla de utilizar y una sintaxis mucho más clara.
+
+Ahora solo nos queda utilizar este hook para acceder a nuestro contexto desde los componentes faltantes.
+
+¿Cuándo se recomienda emplear React Context?
+    Estado global.
+    Tema.
+    Configuración de la app.
+    Autenticación de usuario.
+    Configuración de usuario.
+    Lenguaje preferido.
+    Colección de servicios
+
+CLASE 18.
+PORTALES: TELETRANSPORTACION DE COMPONENTES.
+
+Los portales nos permiten teletransportar componentes a otro nodo de HTML, y seguir comunicándose con otros componentes como si estuviera en el mismo nodo.
+
+Se emplean en ocasiones donde los estilos CSS restringen los elementos. Por ejemplo, problemas de apilamiento z-index y desbordamiento overflow.
+
+¿Para qué podemos usarlos?
+    Modales
+    Tooltips
+    Menús flotantes
+    Widgets
+
+CLASE 19.
+FORMULARIO PARA CREAR TO DO'S.
+
+Algo muy importante al crear formularios es tener en cuenta que React funciona un poco diferente al HTML, ya que en HTML conservan naturalmente algún estado interno.
+
+En React nosotros podemos mutar el estado de nuestros componentes con el hook de estado, un componente controlado es simplemente un componente en el que sus valores son controlados por React.
+
+
+<!-- 
+Esta es mi solución para el reto para cerrar el modal
+
+en el css solo use un z-index: 999; para que el boton esté sobre cualquier otro elemento
+
+En JS hice los siguiente
+
+import React, { useContext } from 'react';
+import { TodoContext } from '../../Context/TodoContext';
+import './CreateTodoButton.css';
+
+export const CreateTodoButton = () => {
+  const { openModal, setOpenModal } = useContext(TodoContext);
+
+  const handleClick = () => {
+    setOpenModal(!openModal);
+  };
+
+  return (
+    <>
+      <button
+        className="CreateTodoButton"
+        type="submit"
+        onClick={() => handleClick()}
+      >
+        {openModal ? 'x' : '+'}
+      </button>
+    </>
+  );
+};
+ -->
