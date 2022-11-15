@@ -99,6 +99,21 @@ Algo muy importante al crear formularios es tener en cuenta que React funciona u
 
 En React nosotros podemos mutar el estado de nuestros componentes con el hook de estado, un componente controlado es simplemente un componente en el que sus valores son controlados por React.
 
+CLASE 20.
+LOADING SKELETONS.
+
+Creamos 3 nuevos componentes para trabajarlos independientemente: TodosError, TodosLoading y EmptyTodos.
+
+Ya que tenemos estos 3 componentes, ahora vamos a llamarlos desde el componente AppUI para conectarlos con la aplicación.
+
+Para el componente TodosLoading le añadimos css para generar el efecto al momento de cargar, copiando un poco los estilos de TodoItem.css; dándole un color de fondo con gradiente, luego un tamaño de fondo lo suficientemente grande como para que pueda darla vuelta sin dejar espacios vacíos (400% es más que suficiente), y terminamos dando una animación que cambie la posición del fondo al principio, a la mitad y al final. El profe nos recomienda 3 segundos para que se visualice mejor la animación, además de cambiar en useLocalStorage.js el tiempo que tarda en llamar al efecto con la función setTimeout.
+
+CLASE 21.
+ICON COMPONENT.
+
+
+
+
 
 <!-- 
 Esta es mi solución para el reto para cerrar el modal
