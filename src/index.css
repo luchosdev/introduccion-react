@@ -1,7 +1,9 @@
 body {
   margin: 0;
   padding: 0;
-  background: #F2F4F5;
+  /* background: #F2F4F5; */
+  background: rgb(2,0,36);
+  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(44,43,79,0.9137925433845413) 28%, rgba(50,82,88,1) 100%);
   color: #1E1E1F;
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
